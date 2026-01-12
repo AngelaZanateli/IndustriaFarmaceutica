@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioPharma Solutions | Portal Industrial</title>
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Bio<span>Pharma</span></div>
+            
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-list">
+                <li><a href="#home">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Institucional <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="industria.html">O que é a Indústria</a></li>
+                        <li class="dropdown-inner">
+                            <a href="#">Setores <i class="fas fa-chevron-right"></i></a>
+                            <ul class="submenu-level2">
+                                <li><a href="pesquisa.html">Pesquisa & Desenvolvimento</a></li>
+                                <li><a href="producao.html">Produção e Insumos</a></li>
+                                <li><a href="qualidade.html">Garantia da Qualidade</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="historico.html">Histórico no Brasil</a></li>
+                    </ul>
+                </li>
+                <li><a href="farmaceutico.html">O Farmacêutico</a></li>
+                <li><a href="dados.html">Dados do Setor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slider-container" id="home">
+        <div class="slider" id="mainSlider">
+            <div class="slide active" onclick="changeSlide(1)">
+                <img src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Pesquisa">
+                <div class="slide-content">
+                    <h1>Inovação em Saúde</h1>
+                    <p>Tecnologia de ponta para o desenvolvimento de novos fármacos.</p>
+                </div>
+            </div>
+            <div class="slide" onclick="changeSlide(1)">
+                <img src="https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Laboratório">
+                <div class="slide-content">
+                    <h1>Segurança e Qualidade</h1>
+                    <p>Processos rigorosos seguindo as normas da ANVISA e GMP.</p>
+                </div>
+            </div>
+            <div class="slide" onclick="changeSlide(1)">
+                <img src="https://images.pexels.com/photos/5910956/pexels-photo-5910956.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Cientista">
+                <div class="slide-content">
+                    <h1>Futuro da Medicina</h1>
+                    <p>Liderando o mercado através da biotecnologia e ética.</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1); event.stopPropagation();">&#10094;</button>
+        <button class="next" onclick="changeSlide(1); event.stopPropagation();">&#10095;</button>
+    </section>
+
+    <main>
+        <section id="sobre" class="section container">
+            <div class="info-block">
+                <h2 class="section-title">O que é a Indústria Farmacêutica?</h2>
+                <p>A indústria farmacêutica é o complexo responsável pela pesquisa, desenvolvimento, fabricação e comercialização de medicamentos. É um pilar fundamental da saúde pública global, focada em prevenir, tratar e curar doenças através da ciência química e biotecnológica.</p>
+                
+                <h3>Características Principais:</h3>
+                <ul>
+                    <li>Alta carga de investimento em P&D (Pesquisa e Desenvolvimento).</li>
+                    <li>Regulação rigorosa por órgãos como a ANVISA e FDA.</li>
+                    <li>Ciclos longos de produção e testes clínicos.</li>
+                    <li>Forte proteção por patentes e propriedade intelectual.</li>
+                </ul>
+            </div>
+        </section>
+
+        
+
+        <section id="historico" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Histórico da Indústria no Brasil</h2>
+                <p>O setor no Brasil evoluiu de laboratórios artesanais para um parque industrial moderno. O grande divisor de águas foi a <strong>Lei dos Genéricos (1999)</strong>, que permitiu que indústrias nacionais crescessem e competissem globalmente, democratizando o acesso à saúde.</p>
+            </div>
+        </section>
+
+        <section id="setores" class="section container">
+            <h2 class="section-title">Quais os setores e como funciona?</h2>
+            <p>O funcionamento baseia-se em uma cadeia complexa que vai da química fina à distribuição hospitalar. Os principais setores são:</p>
+            <div class="grid-setores">
+                <div class="card"><i class="fas fa-microscope"></i> <h4>P&D</h4><p>Pesquisa básica e clínica para novas moléculas.</p></div>
+                <div class="card"><i class="fas fa-vials"></i> <h4>Insumos</h4><p>Fabricação de Princípios Ativos (IFA).</p></div>
+                <div class="card"><i class="fas fa-clipboard-check"></i> <h4>Qualidade</h4><p>Controle de lote e garantia de esterilidade.</p></div>
+            </div>
+        </section>
+
+        <section id="farmaceutico" class="section bg-blue text-white">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">O que o Farmacêutico faz?</h2>
+                <p>O farmacêutico industrial é o responsável técnico técnico legal. Ele atua no controle de qualidade físico-químico, assuntos regulatórios junto à ANVISA, desenvolvimento de formas farmacêuticas e garantia de que cada medicamento seja seguro para o consumo.</p>
+            </div>
+        </section>
+
+        <section id="dados" class="section stats-container">
+            <div class="container">
+                <h2 class="section-title">Dados sobre a Indústria Farmacêutica</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3 class="stat-number">R$ 103 Bi</h3>
+                        <p>Faturamento anual no Brasil.</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="stat-number">8º Lugar</h3>
+                        <p>No ranking mundial de consumo.</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-industry"></i>
+                        <h3 class="stat-number">80%</h3>
+                        <p>Da demanda produzida localmente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="section container">
+            <div class="info-banner">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <h4>Informações sobre Produtos</h4>
+                    <p>Trabalhamos com Medicamentos de <strong>Referência</strong>, <strong>Genéricos</strong> e <strong>Similares</strong>, todos seguindo rígidos testes de bioequivalência.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 BioPharma Solutions. Excelência em ciência a serviço da vida.</p>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* Hero específico */
+.quality-hero {
+    background: linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)), 
+                url('https://images.pexels.com/photos/3735707/pexels-photo-3735707.jpeg?auto=compress&cs=tinysrgb&w=1600');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Layout de Introdução */
+.quality-grid {
+    display: flex;
+    gap: 50px;
+    padding: 80px 20px;
+    align-items: center;
+}
+
+.quality-text { flex: 1; }
+.quality-image { flex: 1; }
+
+.quality-image img {
+    width: 100%;
+    border-radius: 8px;
+    border-left: 10px solid var(--primary);
+}
+
+/* Tags de Normas */
+.standards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.standard-tag {
+    background: var(--primary);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Atividades */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding-bottom: 60px;
+}
+
+.activity-card {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transform: scale(1.02);
+}
+
+.activity-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.activity-card h4 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .quality-grid {
+        flex-direction: column;
+    }
+}
