@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioPharma Solutions | Contato</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/contato.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+   <header>
+        <nav class="navbar">
+            <div class="logo">Bio<span>Pharma</span></div>
+            
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-list">
+                <li><a href="#home">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Institucional <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="industria.html">O que é a Indústria</a></li>
+                        <li class="dropdown-inner">
+                            <a href="#">Setores <i class="fas fa-chevron-right"></i></a>
+                            <ul class="submenu-level2">
+                                <li><a href="pesquisa.html">Pesquisa & Desenvolvimento</a></li>
+                                <li><a href="producao.html">Produção e Insumos</a></li>
+                                <li><a href="qualidade.html">Garantia da Qualidade</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="historico.html">Histórico no Brasil</a></li>
+                    </ul>
+                </li>
+                <li><a href="farmaceutico.html">O Farmacêutico</a></li>
+                <li><a href="dados.html">Dados do Setor</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container section">
+        <h2 class="section-title">Fale Conosco</h2>
+        <p style="text-align: center;">Tem alguma dúvida ou sugestão? Entre em contato com nossa equipe técnica.</p>
+
+        <div class="contact-wrapper">
+            <section class="contact-form">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo <span>*</span></label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail Corporativo <span>*</span></label>
+                        <input type="email" id="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto">
+                            <option value="tecnico">Dúvidas Técnicas</option>
+                            <option value="comercial">Comercial</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" rows="5" placeholder="Como podemos ajudar?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+            </section>
+
+            <aside class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Localização</h4>
+                        <p>Av. das Nações Unidas, 12901 - Brooklin, São Paulo - SP</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Telefone</h4>
+                        <p>+55 (11) 4004-0000</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>E-mail</h4>
+                        <p>contato@biopharma.com.br</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 BioPharma Solutions. Excelência em ciência a serviço da vida.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

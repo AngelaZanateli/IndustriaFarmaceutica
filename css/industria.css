@@ -1,76 +1,167 @@
 /* Banner de destaque da página */
 .hero-page {
-    background: linear-gradient(rgba(0, 74, 153, 0.8), rgba(0, 74, 153, 0.8)), 
+    background: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 74, 153, 0.7)), 
                 url('https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=1600');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* Efeito Parallax */
     color: white;
-    padding: 100px 0;
+    padding: 120px 0;
     text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); /* Corte moderno no fundo */
 }
 
 .hero-page h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
-/* Layout de conteúdo com Sidebar */
+.hero-page p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Layout de conteúdo */
 .content-detail {
-    display: flex;
-    gap: 40px;
-    padding: 60px 20px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    padding: 80px 20px;
+    margin-top: -50px; /* Sobrepõe levemente o banner */
 }
 
 .text-wrapper {
-    flex: 2;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .text-wrapper h2 {
     color: var(--primary);
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
 }
 
+.text-wrapper h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+}
+
+.text-wrapper p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* Grid de Informações com Cards */
 .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 25px;
+    margin-top: 40px;
 }
 
 .info-item {
-    background: #f1f5f9;
-    padding: 20px;
-    border-radius: 8px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid var(--accent);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 .info-item i {
-    font-size: 1.5rem;
-    color: var(--accent);
-    margin-bottom: 10px;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
 }
 
-/* Barra lateral */
+.info-item h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* Barra lateral Estilizada */
 .sidebar-info {
-    flex: 1;
+    background: var(--light);
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    position: sticky;
+    top: 100px;
+}
+
+.sidebar-info h3 {
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar-info .fact-card {
     background: var(--primary);
     color: white;
-    padding: 30px;
-    border-radius: 12px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-style: italic;
+    position: relative;
+}
+
+.sidebar-info .fact-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 4rem;
+    opacity: 0.2;
 }
 
 .sidebar-info img {
     width: 100%;
-    border-radius: 8px;
-    margin-top: 20px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: grayscale(30%);
+    transition: 0.5s;
+}
+
+.sidebar-info img:hover {
+    filter: grayscale(0%);
 }
 
 /* Ajuste Mobile */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .content-detail {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        margin-top: 0;
     }
     
+    .hero-page {
+        clip-path: none;
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 600px) {
     .info-grid {
         grid-template-columns: 1fr;
     }
